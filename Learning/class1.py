@@ -15,3 +15,10 @@ def hello():
 print(hello())
 #tuple1 = ('hello','world')
 #set1 = {'hello','world'}
+
+s = {'Item1','Item2','Item1'}
+print(s)
+s.add('Item3')
+print(s)
+for item in s:
+    print(item)
