@@ -6,24 +6,28 @@ def whoWon(user,oppo):
     if (user == 'r' and oppoFirst == 'r') or (user == 's' and oppoFirst =='s') or (user == 'p' and oppoFirst == 'p'):
         message = 'Its a Tie!'
     elif (user == 'r' and oppoFirst == 's') or (user == 's' and oppoFirst == 'p') or (user == 'p' and oppoFirst == 'r'):
-        message = 'You Won!!!!'
+        message = 'You Won, Good job !!'
     else:
-        message = 'You lost :('
+        message = 'You Lost :(('
     return message
 
 
 
-message = 'pick (R)ock,(P)aper or (S)cissors: '
+message = 'pick (R)ock,(P)aper or (S)cissors or quit: '
 user_input = input(message).lower()
-if user_input == 'r' or user_input == 'p' or user_input == 's':
-    if user_input == 'r':
-        print('you chose Rock!')
-    elif user_input == 's':
-        print('you chose Scissors!')
-    elif user_input == 'p':
-        print('you chose Paper!')
-    opponent = random.choice(['rock','paper','scissors'])
-    print(whoWon(user_input,opponent))
-    print('opponent was',opponent[0].upper()+opponent[1::])
+while user_input != 'quit':
+    if user_input == 'r' or user_input == 'p' or user_input == 's':
+        opponent = random.choice(['rock','paper','scissors'])
+        print(whoWon(user_input,opponent))
+        if user_input == 'r':
+            print('you chose Rock')
+        elif user_input == 's':
+            print('you chose Scissors')
+        elif user_input == 'p':
+            print('you chose Paper')
+        print('opponent was',opponent[0].upper()+opponent[1::])
+    else:
+        print('Please type: R/P/S')    
+    user_input = input(message).lower()
 
 
