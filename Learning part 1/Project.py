@@ -16,7 +16,7 @@ def whoWon(user,oppo):
 message = 'pick (R)ock,(P)aper or (S)cissors or quit: '
 user_input = input(message).lower()
 while user_input != 'quit':
-    if user_input == 'r' or user_input == 'p' or user_input == 's':
+    if user_input in ['r','p','s']:
         opponent = random.choice(['rock','paper','scissors'])
         print(whoWon(user_input,opponent))
         if user_input == 'r':
