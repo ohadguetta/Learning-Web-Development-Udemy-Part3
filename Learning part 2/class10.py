@@ -31,6 +31,12 @@ def reverse_dict(**kwargs):
     return reverse
 print(reverse_dict(name='ohad',age=20,blop='ohad'))
 
+
+
+# Write a function called unique_elements that takes in two lists as 
+# input and returns a new list containing the unique elements from both lists, 
+# in the order of their first occurrence.
+
 def unique_list(lst1,lst2):
     lst3 = lst1[:] # or lst3 = list(lst1)
     for item in lst2:
@@ -39,6 +45,9 @@ def unique_list(lst1,lst2):
     return lst3
 print(unique_list([1,2,3,4],[2,3,4,7,8]))
 print(unique_list(['a', 'b', 'c'], ['b', 'c', 'd']))
+
+
+# Palindrome
 
 def is_palindrome(value):
     reverse = ''
@@ -59,3 +68,51 @@ print(is_palindrome_quicker('alll'))
 print(is_palindrome_quicker('GrerG'))
 
 
+# Write a function called capitalize_titles that takes a list of strings as input.
+#  The function should capitalize the first letter of each word in the string if 
+# the word is not one of the common English articles (i.e., "a", "an", "the"), 
+# prepositions (i.e., "in", "on", "at"), or conjunctions (i.e., "and", "but", "or").
+#  The function should return the modified list of strings.
+
+
+
+def capitalize_words(*args):
+    exceptions = ['a','or','and','of','the','an','at','in','on','at','but']
+    for item in list(args):
+        sentence = ''
+        try:
+            for word in item.split():
+                if word not in exceptions:
+                    sentence = sentence + str(word).capitalize() + ' '
+                else:
+                    sentence = sentence + str(word) + ' '
+            return sentence
+        except:
+            return 'Error, maybe one of the values is not a string?'
+
+print(capitalize_words('hello world','hello and welcome!', 'fireee and a rain!',123))
+
+
+
+# Write a function called calculate_discount that takes in a string representing 
+# an item name and its price, separated by a colon (e.g., "item_name:price"). 
+# The function should calculate the discounted price based on the following rules:
+
+# If the item name starts with "sale_" (case insensitive), apply a 20% discount.
+# If the item name starts with "clearance_" (case insensitive), apply a 50% discount.
+# If the item name does not start with either "sale_" or "clearance_", apply no discount.
+# The function should return a string in the format "item_name:discounted_price".
+
+def calculate_discount(value):
+    if isinstance(value,str):
+        name = value.split(':')[0]
+        price = int(value.split(':')[1])
+        if name.lower().startswith(('sale')):
+            price = price * 0.8
+        elif name.lower().startswith(('clearence')):
+            price = price * 0.5
+        return name+':'+str(round(price,2))
+
+print(calculate_discount('item1:100'))
+print(calculate_discount('Sale_item1:56'))
+print(calculate_discount('Clearence_item1:230'))
