@@ -1,0 +1,4 @@
+Deposit was executed with 200 amount. total balance is: 300.0
+Withdraw was executed with 400 amount. total balance is: 0
+Deposit was executed with 1000 amount. total balance is: 1000
+Withdraw was executed with 200 amount. total balance is: 800
