@@ -116,3 +116,4 @@ def calculate_discount(value):
 print(calculate_discount('item1:100'))
 print(calculate_discount('Sale_item1:56'))
 print(calculate_discount('Clearence_item1:230'))
+
