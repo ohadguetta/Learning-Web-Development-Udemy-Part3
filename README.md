@@ -1,13 +1,13 @@
-# Part 3 of learning Fullstack WebDev in Udemy
-The one before the last part in fullstack udemy.
+# Part 3 and the grand finale of learning Fullstack WebDev in Udemy
+The last part in fullstack udemy.
 
 ## What I will learn in this part:
 - Python
 - Sql
 - Django
-
-## Part 4 and onwards:
 - Wagtail
+
+## Onwards:
 - Express And Mongo
 - Next.js
 - Tailwing
