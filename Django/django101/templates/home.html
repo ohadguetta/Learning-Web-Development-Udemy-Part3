@@ -2,4 +2,9 @@
 
 {% block body %}
     <h1>{{this_thing}}</h1>
+    <div>{%for post in posts%}
+           <h2> {{post.text}} </h2>
+           <hr>
+        {%endfor%}
+    </div>
 {% endblock%}
